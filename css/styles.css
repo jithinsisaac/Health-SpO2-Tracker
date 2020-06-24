@@ -1,0 +1,94 @@
+html {
+  background: url("../images/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background: none;
+}
+
+.container {
+  text-align: center;
+
+  margin-top: 20px;
+}
+#collapseExample1,
+#collapseExample2,
+#adduser,
+#viewDataIDusername {
+  display: none;
+}
+#adduser {
+  margin-top: -20px;
+}
+input {
+  text-align: center;
+  font-size: x-small;
+}
+.labelColor {
+  color: white;
+}
+.btnboundary {
+  border: 1px solid black;
+}
+
+table {
+  /* border-collapse: collapse; */
+  /* width: 100%; */
+  /* color: #588c7e; 
+    font-size: 18px; */
+  /* text-align: center;  */
+  counter-reset: tableCount;
+}
+th {
+  /* background-color: #588c7e;
+    color: white; */
+}
+tr:nth-child(even) {
+  /* color: black;
+    background-color: #f2f2f2; */
+}
+tr:nth-child(odd) {
+  /* color: black;
+    background-color: lightgrey; */
+}
+tr {
+  /* font-size: 20px; */
+}
+.counterCell:before {
+  content: counter(tableCount);
+  counter-increment: tableCount;
+}
+.footer {
+  /* position: fixed; */
+
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-weight: normal;
+  font-size: 14px;
+}
+#setTimeExample {
+  height: 30px;
+  width: 105px;
+  margin-right: -12px;
+}
+#setTimeButton {
+  height: 30px;
+  width: 125px;
+  margin-left: -12px;
+}
+#inputDatepickerForm {
+  height: 30px;
+  width: 110px;
+}
+#spo2group {
+  /* width: 240px; */
+}
+canvas {
+  /* border: 1px dotted red; */
+  /* background: lightgrey; */
+}
