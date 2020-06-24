@@ -2,7 +2,7 @@
     //Sessions: Last till browser is ON
     session_start();   
 
-    include '8SQLconnection.php'; 
+    include '../8SQLconnection.php'; 
    
     $success1="";
     $failure1=""; 
@@ -12,7 +12,7 @@
     $viewStatus1="";
     
 //REGISTERING NEW USER
-                if(array_key_exists("registerOrEnterdata",$_POST)&&array_key_exists("username",$_POST)){
+        if(array_key_exists("registerOrEnterdata",$_POST)&&array_key_exists("username",$_POST)){
         $hello="heyyy";
         //Registering User Form with this extra flag
         if($_POST["registerOrEnterdata"] == '0'){
@@ -108,19 +108,19 @@
 
         <!-- Local packages -->
         <!-- jQuery -->
-            <script src="jquery-3.5.1.min.js"></script>
+            <script src="../jquery-3.5.1.min.js"></script>
         <!-- jQuery UI -->                        
-            <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
-            <script src="jquery-ui-1.12.1/jquery-ui.js"></script> 
+            <link href="../jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+            <script src="../jquery-ui-1.12.1/jquery-ui.js"></script> 
         <!-- jQueryUI Time Picker jonthornton-->
-            <link rel="stylesheet" href="jonthornton-jquery-timepicker/jquery.timepicker.css">
-            <script src="jonthornton-jquery-timepicker/jquery.timepicker.min.js"></script>
+            <link rel="stylesheet" href="../jonthornton-jquery-timepicker/jquery.timepicker.css">
+            <script src="../jonthornton-jquery-timepicker/jquery.timepicker.min.js"></script>
         <!-- ChartJS -->
-            <script src="Chart.js\Chart.bundle.js"></script> 
+            <script src="../Chart.js/Chart.bundle.js"></script> 
         <!-- Bootstrap CSS, PopperJS, Bootstrap JS -->
-            <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
-            <script src="popper.min.js"></script>
-            <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>   
+            <link rel="stylesheet" href="../bootstrap-4.5.0-dist/css/bootstrap.min.css">
+            <script src="../popper.min.js"></script>
+            <script src="../bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>   
         <style>
             html { 
                 background: url("spo232.jpg") no-repeat center center fixed; 
