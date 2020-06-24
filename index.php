@@ -325,8 +325,11 @@
                 
             </div>                  
         </div> 
+
+
         <!-- JAVASCRIPT         -->
         <script type="text/javascript" src="js/script.js"></script>         
+        
         <!-- CHART JAVASCRIPT         -->
         <script>
             //labels: < ?php echo $dateofentryJson; ?>,
