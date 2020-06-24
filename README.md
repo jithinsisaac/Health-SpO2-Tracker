@@ -9,7 +9,7 @@ https://jithinisaac.dblabs.in/projects/fullstack/7-mysql/9SpO2tracker.php
 ## About the project
 
 - I am basically an embedded systems electronics engineer & hobbyist.  
-- Full stack web development for **small** projects & for my IoT applications is my hobby.
+- As a hobby, I do Full stack web development for **small** projects & for my Embedded-IoT applications 
 - This project was done to learn about the various frontend & backend integrations
 - **Frontend:** HTML, CSS, Bootstrap, Javascript, jQuery
 - **Backend:** PHP 
@@ -18,8 +18,9 @@ https://jithinisaac.dblabs.in/projects/fullstack/7-mysql/9SpO2tracker.php
 
 ## Dependencies
 
-- Edit the SQLconnection.php file with your SQL servers IP address, username, password & database name
--  
+- Download the entire repository to your computer 
+- Edit the src/backend.php file with your SQL servers IP address, username, password & database name
+- If local SQL server, then continue using localhost
 
 
 
