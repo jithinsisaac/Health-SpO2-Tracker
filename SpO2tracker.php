@@ -2,7 +2,7 @@
     //Sessions: Last till browser is ON
     session_start();   
 
-    include '../8SQLconnection.php'; 
+    include 'SQLconnection.php'; 
    
     $success1="";
     $failure1=""; 
@@ -123,7 +123,7 @@
             <script src="../bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>   
         <style>
             html { 
-                background: url("spo232.jpg") no-repeat center center fixed; 
+                background: url("images/background.jpg") no-repeat center center fixed; 
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -222,8 +222,8 @@
             <h2><b>SpO2 (Oxy Saturation)</b></h2>
             <h3><b>Monitoring & Tracking</b></h3>
             <p> &copy;Jithin Saji Isaac (June 2020)<br>
-            <a href="https://github.com/jithinsisaac"><img src="GitHub-Mark-32px.png" alt="" width="20" height="20"></a>
-            <a href="https://jithinisaac.dblabs.in"><img src="web.png" alt="" width="20" height="20"></a>  
+            <a href="https://github.com/jithinsisaac"><img src="images/GitHub-Mark-32px.png" alt="" width="20" height="20"></a>
+            <a href="https://jithinisaac.dblabs.in"><img src="images/web.png" alt="" width="20" height="20"></a>  
             </p>
             <h4><span class="badge badge-danger">Testing: User Auth not implemented</span></h4>
             <br>
