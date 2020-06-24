@@ -2,8 +2,7 @@
     //Sessions: Last till browser is ON
     session_start();   
 
-    include 'SQLconnection.php'; 
-   
+    include 'src/SQLconnection.php';    
     $success1="";
     $failure1=""; 
     $success2="";
@@ -121,100 +120,7 @@
             <link rel="stylesheet" href="../bootstrap-4.5.0-dist/css/bootstrap.min.css">
             <script src="../popper.min.js"></script>
             <script src="../bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>   
-        <style>
-            html { 
-                background: url("images/background.jpg") no-repeat center center fixed; 
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-            }
-
-            body{
-                background: none;
-            }
-            
-            .container{
-                text-align:center;
-                 
-                margin-top:20px;
-            }
-             #collapseExample1,#collapseExample2,#adduser,#viewDataIDusername{
-                display:none;
-            }  
-            #adduser{
-                margin-top:-20px;
-
-            }
-            input{
-                text-align:center;
-                font-size:x-small;
-            }
-            .labelColor{
-                color:white;
-            }
-            .btnboundary{
-                border: 1px solid black;
-            }
-
-            table {
-                /* border-collapse: collapse; */
-                /* width: 100%; */
-                /* color: #588c7e; 
-                font-size: 18px; */
-                /* text-align: center;  */
-                counter-reset: tableCount;  
-            } 
-            th {
-                /* background-color: #588c7e;
-                color: white; */
-            }
-            tr:nth-child(even) {
-                /* color: black;
-                background-color: #f2f2f2; */
-            }
-            tr:nth-child(odd) {
-                /* color: black;
-                background-color: lightgrey; */
-            }
-            tr{
-                /* font-size: 20px; */
-            }
-            .counterCell:before {              
-                content: counter(tableCount); 
-                counter-increment: tableCount; 
-            }
-            .footer {
-                /* position: fixed; */
-                
-                width: 100%; 
-                color: black;
-                text-align: center;
-                font-weight: normal;
-                font-size: 14px
-            }
-            #setTimeExample{
-                height: 30px;
-                width: 105px;
-                margin-right:-12px;
-            }
-            #setTimeButton{
-                height: 30px;
-                width: 125px;
-                margin-left:-12px;
-            }
-            #inputDatepickerForm{
-                height: 30px;
-                width: 110px;
-            }
-            #spo2group{
-                /* width: 240px; */
-            }
-            canvas {
-                /* border: 1px dotted red; */
-                /* background: lightgrey; */
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/style.css">    
     </head>
 
     <body>
@@ -514,122 +420,10 @@
                     ?>
                 
             </div>                  
-        </div>
- 
+        </div> 
         <!-- JAVASCRIPT         -->
-        <script >
-            $("#adduserButton").click(function(){
-                $("#collapseExample1").hide();
-                $("#collapseExample2").hide();
-                $("#adduser").toggle();
-                $("#error1").empty();
-                $("#error2").empty();                    
-                $("#viewDataIDusername").empty();
-                $("#viewDataID").empty(); 
-            });
-            $("#enterButton").click(function(){
-                $("#collapseExample1").toggle();
-                $("#collapseExample2").hide();                
-                $("#adduser").hide();
-                $("#error1").empty();
-                $("#error2").empty();                    
-                $("#viewDataIDusername").empty();
-                $("#viewDataID").empty(); 
-            });
-            $("#trackButton").click(function(){
-                $("#collapseExample2").toggle();
-                $("#collapseExample1").hide();
-                $("#adduser").hide();
-                $("#error1").empty();
-                $("#error2").empty();                
-                $("#viewDataIDusername").empty(); 
-                $("#viewDataID").empty(); 
-            });
-            $("#dataButton").click(function(){
-                $("#collapseExample1").hide();
-                $("#adduser").hide();
-                $("#error1").empty();
-                $("#error2").empty();
-                $("#viewDataIDusername").show(); 
-                $("#viewDataID").show();                
-            });
-
-            //Date Picker
-            //Choose Date from inline div as input 
-            //https://stackoverflow.com/questions/19344135/combine-inline-jquery-datepicker-with-an-input-field
-            $('#inlineDatepickerDiv').datepicker({
-                dateFormat: 'yy-mm-dd',
-                maxDate: "+0M +0D",
-                inline: true,
-                altField: '#inputDatepickerForm'
-            });
-
-            $('#inputDatepickerForm').change(function(){
-                $('#inlineDatepickerDiv').datepicker('setDate', $(this).val());
-            });
-
-            //Time Picker 
-            //https://www.jonthornton.com/jquery-timepicker/
-            $('#setTimeExample').timepicker({ 'timeFormat': 'H:i:s' });
-            $('#setTimeButton').on('click', function (){
-                $('#setTimeExample').timepicker('setTime', new Date());
-            });
-
-            //To ignore blank spaces in user registration input
-            function validateForm1() {
-                var x = document.forms["registerForm"]["username"].value;
-                if (x == "") {
-                    alert("Valid username must be entered!");
-                    return false;
-                }                   
-            }
-
-            //To ignore blank spaces in spo2 reading input
-            function validateForm2() {
-                var x = document.forms["spo2enterForm"]["spo2input"].value;
-                var y = document.forms["spo2enterForm"]["regUserName"].value;                
-                var z = document.forms["spo2enterForm"]["date"].value;
-                var p = document.forms["spo2enterForm"]["time"].value;
-                if (x == "" || y == "" || z == "" || p == "") {
-                    alert("Username must be selected / Date-Time & SpO2 details must be entered!");
-                    return false;
-                } 
-            }
-
-            //To validate if user checks some username to view data/graph
-            function validateForm3() {
-                var x = document.forms["trackForm"]["regUserName"].value;
-                if (x == "") {
-                    alert("Some username must be selected!");
-                    return false;
-                }
-            } 
-
-            //To not allow illegal characters in reg user text
-            $("#adduserInput").keyup(function(e) {
-                // Our regex
-                // a-z => allow all lowercase alphabets
-                // A-Z => allow all uppercase alphabets
-                // 0-9 => allow all numbers
-                // @ => allow @ symbol
-                var regex = /^[a-zA-Z0-9@._]+$/;
-                // This is will test the value against the regex
-                // Will return True if regex satisfied
-                if (regex.test(this.value) !== true){ 
-                    //alert if not true
-                    //
-                    // You can replace the invalid characters by:
-                    this.value = this.value.replace(/[^a-zA-Z0-9@]+/, '');
-                    alert("Invalid characters. Only a-z,A-Z,0-9,._@ permitted");
-                }
-            });
-
-            if ( window.history.replaceState ) {
-                window.history.replaceState( null, null, window.location.href );
-            }
- 
-        </script>
-
+        <script type="text/javascript" src="js/script.js"></script>         
+        <!-- CHART JAVASCRIPT         -->
         <script>
             //labels: < ?php echo $dateofentryJson; ?>,
            // data: < ?php echo $spo2readingJson; ?>
@@ -698,9 +492,5 @@
                 data: data
             });
         </script>
- 
-
     </body> 
 </html>
-
- 
