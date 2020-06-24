@@ -16,6 +16,11 @@ https://jithinisaac.dblabs.in/projects/fullstack/7-mysql/9SpO2tracker.php
 - **Database:** MariaDB
 - **Hosting:** DigitalOcean
 
+## Dependencies
+
+- Edit the SQLconnection.php file with your SQL servers IP address, username, password & database name
+-  
+
 
 
 
