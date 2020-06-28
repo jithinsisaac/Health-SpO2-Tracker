@@ -8,19 +8,17 @@ https://jithinisaac.dblabs.in/projects/fullstack/7-mysql/HealthSpO2Tracker/index
 ## About the project
 
 - I am basically an embedded systems electronics engineer & hobbyist.  
-- As a hobby, I do Full stack web development for **small** projects & for my Embedded-IoT applications 
+- As a hobby, I do Full stack web development for **small** projects & for my Embedded-IoT applications
 - This project was done to learn about the various frontend & backend integrations
 - **Frontend:** HTML, CSS, Bootstrap, Javascript, jQuery
-- **Backend:** PHP 
+- **Backend:** PHP
 - **Database:** MariaDB
 - **Hosting:** DigitalOcean
 
 ## Dependencies
 
-- Download the entire repository to your computer 
+- Download the entire repository to your computer
 - Edit the src/backend.php file with your SQL servers IP address, username, password & database name
 - If local SQL server, then continue using localhost
 
-
-
-
+Feel Free to add your contributions and send pull requests to me.
